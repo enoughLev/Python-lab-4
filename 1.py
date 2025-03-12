@@ -23,7 +23,6 @@ print("5.", end=' ')
 list_5 = [int(num) for num in input().split()]
 print(' '.join([str(element**2) for element in list_5]))
 
-#6
+# 6
 print("6.", end=' ')
-
-
+print(' '.join([str(int(x) ** 2) for x in input().split() if int(x) % 2 and int(x) ** 2 % 10 != 9]))
