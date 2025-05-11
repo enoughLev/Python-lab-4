@@ -1,22 +1,24 @@
-def matrix(n=None, m=None, a=None):
-    matr = []
-    if n == None:
-        matr.append("0")
-        return matr
-    elif n > 0:
-        for s in range(n):
-            i = n
-            row = []
-            while i > 0:
-                row.append("0")
-                i = i - 1
-            matr.append(row)
-        return matr
-    elif n > 0 and m > 0:
-        for s in range(n):
-              
-            
-rows = matrix(3)
-#print(rows)
-for row in rows:
+def matrix(n=1, m=None, a=0):
+    if m is None:
+        return [[0] * n for _ in range(n)]
+    else:
+        if a == 0:
+            return [[0] * m for _ in range(n)]
+        else:
+            return [[a] * m for _ in range(n)]
+
+rows1 = matrix(3)
+rows2 = matrix(3, 2)
+rows3 = matrix(2, 3, 8)
+
+for row in rows1:
     print(*row)
+print()
+
+for row in rows2:
+    print(*row)
+print()
+
+for row in rows3:
+    print(*row)
+print()
